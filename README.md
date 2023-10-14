@@ -41,48 +41,6 @@ node app.js
 The application should now be running at http://localhost:3000.
 
 # Usage
-
-Once the application is up and running, open a web browser and navigate to http://localhost:3000 to access the Task Manager. You can perform the following actions:
-
-
-Certainly! Here's a simple README file for your Task Manager application:
-
-Task Manager Web Application
-This is a web-based Task Manager application that allows users to manage tasks, including adding, editing, completing, deleting, and searching tasks. The tasks are displayed in a sorted order based on priority and due date.
-
-Table of Contents
-Getting Started
-Usage
-Endpoints
-Dependencies
-Contributing
-License
-Getting Started
-Follow the instructions below to set up and run the Task Manager application on your local machine.
-
-Clone the repository:
-
-bash
-Copy code
-git clone <repository_url>
-Change to the project directory:
-
-bash
-Copy code
-cd task-manager-app
-Install the required dependencies:
-
-bash
-Copy code
-npm install
-Start the application:
-
-bash
-Copy code
-node app.js
-The application should now be running at http://localhost:3000.
-
-Usage
 Once the application is up and running, open a web browser and navigate to http://localhost:3000 to access the Task Manager. You can perform the following actions:
 
 **View Tasks**:
