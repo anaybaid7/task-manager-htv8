@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task Manager</title>
+  <style>
+    .completed { text-decoration: line-through; }
+  </style>
+</head>
+<body>
+  <h1>Task Manager</h1>
+  <form action="/search" method="get">
+    <label>Search Tasks:</label>
+    <input type="text" name="search">
+    <button type="submit">Search</button>
+  </form>
+  <ul>
+    ${sortedTasks.map((task, index) => `
+      <li class="${task.completed ? 'completed' : ''}">
+        <b>${task.name}</b> - Priority: ${task.priority} - Due Date: ${task.dueDate}<br>
+        Description: ${task.description}<br>
+        Category: ${task.category || 'Uncategorized'}<br>
+        <a href="/complete/${index}">Mark as Completed</a> |
+        <a href="/edit/${index}">Edit</a> |
+        <a href="/delete/${index}">Delete</a>
+      </li>
+    `).join('')}
+  </ul>
+  <form action="/add" method="post">
+    <label>Task Name:</label>
+    <input type="text" name="name" required><br>
+    <label>Priority:</label>
+    <input type="text" name="priority" required><br>
+    <label>Due Date:</label>
+    <input type="date" name="dueDate"><br>
+    <label>Description:</label>
+    <textarea name="description"></textarea><br>
+    <label>Category:</label>
+    <input type="text" name="category"><br>
+    <button type="submit">Add Task</button>
+  </form>
+</body>
+</html>
+
